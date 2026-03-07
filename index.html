@@ -672,32 +672,9 @@
       </div><!-- Contact Form -->
       <div class="rounded-2xl p-8 gold-border gold-glow" style="background: var(--color-surface);">
        <h3 class="font-display text-2xl mb-6" style="color: var(--color-text);">Send us a Message</h3>
-       <form id="contact-form" onsubmit="handleSubmit(event)">
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-         <div><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="name" style="color: var(--color-text);">Name</label> <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border transition-all" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);" placeholder="Your name" required>
-         </div>
-         <div><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="email" style="color: var(--color-text);">Email</label> <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border transition-all" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);" placeholder="your@email.com" required>
-         </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-         <div><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="phone" style="color: var(--color-text);">Phone</label> <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border transition-all" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);" placeholder="+91 XXXXX XXXXX">
-         </div>
-         <div><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="guests" style="color: var(--color-text);">Guests</label> <select id="guests" class="w-full px-4 py-3 rounded-lg border transition-all" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);"> <option value="">Select guests</option> <option value="1-2">1-2 Guests</option> <option value="3-4">3-4 Guests</option> <option value="5+">5+ Guests</option> </select>
-         </div>
-        </div>
-        <div class="mb-4"><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="dates" style="color: var(--color-text);">Preferred Dates</label> <input type="text" id="dates" class="w-full px-4 py-3 rounded-lg border transition-all" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);" placeholder="Check-in — Check-out">
-        </div>
-        <div class="mb-6"><label class="text-xs tracking-widest uppercase mb-2 block opacity-70" for="message" style="color: var(--color-text);">Message</label> <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border transition-all resize-none" style="background: var(--color-bg); border-color: rgba(201, 169, 98, 0.3); color: var(--color-text);" placeholder="Tell us about your stay preferences..."></textarea>
-        </div><button type="submit" class="btn-primary w-full py-4 rounded-full text-sm tracking-widest uppercase font-medium" style="color: var(--color-bg);"> Send Inquiry </button>
-       </form><!-- Success Message -->
-       <div id="success-message" class="hidden text-center py-8">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(91, 138, 114, 0.2);">
-         <svg class="w-8 h-8" viewbox="0 0 24 24" fill="none" stroke="#5b8a72" stroke-width="2"><path d="M20 6L9 17l-5-5" />
-         </svg>
-        </div>
-        <h4 class="font-display text-xl mb-2" style="color: var(--color-text);">Thank You!</h4>
-        <p class="opacity-70" style="color: var(--color-text);">We'll get back to you within 24 hours.</p>
-       </div>
+               <button type="submit" class="btn-primary w-full py-4 rounded-full text-sm tracking-widest uppercase font-medium" style="color: var(--color-bg);"> Send Inquiry </button>
+       <!-- Success Message -->
+       
       </div>
      </div>
     </div>
@@ -753,15 +730,15 @@
   <script>
     // Default configuration
     const defaultConfig = {
-      hero_title: 'Serenity Shores',
-      hero_subtitle: 'Where the Ocean Meets Tranquility',
-      about_title: 'A Sanctuary by the Sea',
-      about_description: 'Nestled along the pristine coastline, Serenity Shores Homestay offers an unparalleled escape from the ordinary. Our thoughtfully designed spaces harmonize with nature, providing guests with an intimate connection to the sea while enjoying modern comforts and personalized service.',
+      hero_title: 'Suvarna Homestay Resort',
+      hero_subtitle: 'Your Premium Home Away From Home',
+      about_title: 'About Suvarna Homestay & Resort',
+      about_description: 'Located on the peaceful Padubidri Murudi Brahmasthana Road, Suvarna Homestay & Resort is your premier destination for group getaways and family retreats. We blend modern luxury with a tranquil atmosphere, offering a spacious 4-bedroom villa, elegantly designed deluxe rooms, and versatile event spaces. Whether you’re here to celebrate or simply unwind, our property is crafted to provide you with the perfect balance of comfort, space, and serenity.',
       rooms_title: 'Our Luxurious Rooms',
       contact_title: 'Book Your Stay',
-      phone_number: '+91 98765 43210',
-      email_address: 'stay@serenityshores.com',
-      location_text: 'Malvan Beach Road, Sindhudurg, Maharashtra 416606',
+      phone_number: '+91 9187564749',
+      email_address: 'suvarnahomestaypadubidri@gmail.com',
+      location_text: 'Padubidri Murudi Brahmasthana Road, Padubidri, Karnataka, India',
       background_color: '#0a1628',
       surface_color: '#1a2d4a',
       text_color: '#f4efe9',
@@ -919,28 +896,12 @@
       });
     });
     
-    // Form submission handler
-    function handleSubmit(event) {
-      event.preventDefault();
-      
-      const form = document.getElementById('contact-form');
-      const successMessage = document.getElementById('success-message');
-      
-      // Hide form and show success message
-      form.style.display = 'none';
-      successMessage.classList.remove('hidden');
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        form.reset();
-        form.style.display = 'block';
-        successMessage.classList.add('hidden');
-      }, 5000);
-    }
+    
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d76873e6744867b',t:'MTc3MjY4NjUyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
+
 
 
 
